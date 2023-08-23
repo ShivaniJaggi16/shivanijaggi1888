@@ -92,26 +92,39 @@ export default function HomePage() {
 
     return (
       <div>
-        <p>Your Account: {account}</p>
-        <p>Your Balance: {balance}</p>
-        <button onClick={deposit}>Deposit 1 ETH</button>
-        <button onClick={withdraw}>Withdraw 1 ETH</button>
+        <p style={{ color: 'red' }}>User Account: {account}</p>
+        <p style={{ color: 'green' }}>User Balance: {balance}</p>
+        <button onClick={deposit}>Credit your account with 1 ETH</button>
+        <button onClick={withdraw}>Withdraw your account with 1 ETH</button>
       </div>
     )
+    
   }
 
   useEffect(() => {getWallet();}, []);
 
   return (
     <main className="container">
-      <header><h1>Welcome to the Metacrafters ATM!</h1></header>
+      <header>
+        <h1>Welcome!You've arrived at the Metacrafters ATM</h1>
+      </header>
+      <h1>Owner Name : Shivani Jaggi </h1>
       {initUser()}
       <style jsx>{`
         .container {
-          text-align: center
+          text-align: center;
+          background-color: PINK;
+          padding: 200px;
+          border-radius: 50px;
+          color: blue; 
         }
       `}
       </style>
     </main>
   )
 }
+
+
+ 
+  
+   
